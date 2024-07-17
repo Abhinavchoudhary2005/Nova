@@ -1,0 +1,51 @@
+.NavBar {
+  height: 14vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 7px 10px -1px rgb(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  width: 14rem;
+}
+
+.logo {
+  height: 7rem;
+  padding-left: 60px;
+}
+
+.name {
+  margin-top: 2rem;
+  color: black;
+}
+
+.Admin-name {
+  position: absolute;
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+  top: 50%;
+  left: 36%;
+}
+
+.aside-container {
+  display: flex;
+}
+
+.aside-left {
+  height: 86vh;
+  width: 20vw;
+  flex-direction: column;
+  box-shadow: 7px 0px 10px -1px rgb(0, 0, 0, 0.1);
+}
+
+.aside-right {
+  height: 86vh;
+  width: 80vw;
+  flex-direction: column;
+}

@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+Backend/node_modules/
+Frontend/node_modules/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Environment variable files
+.env
+Backend/.env
+Frontend/.env
+
+# Build directories
+build/
+Frontend/build/
+
+# Optional npm cache directory
+.npm
+
+# Other
+coverage/
+*.lock
+.idea/
+.vscode/
