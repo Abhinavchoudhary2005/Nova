@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { CartContext } from "../Context/CartContex";
 import "./CartItems.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const CartItems = (props) => {
   const { fetchCart, triggerCartChange } = useContext(CartContext);
@@ -18,8 +20,6 @@ export const CartItems = (props) => {
       });
       fetchCart();
       triggerCartChange();
-
-      // Show toast notification
       toast.success("Item removed from cart!");
     } catch (error) {
       console.error("Error removing item:", error);
