@@ -18,8 +18,12 @@ export const CartItems = (props) => {
       });
       fetchCart();
       triggerCartChange();
+
+      // Show toast notification
+      toast.success("Item removed from cart!");
     } catch (error) {
       console.error("Error removing item:", error);
+      toast.error("Error removing item. Please try again later.");
     }
   };
 
