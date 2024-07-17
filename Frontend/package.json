@@ -1,7 +1,6 @@
 {
   "name": "e-commerce",
   "version": "0.1.0",
-  "homepage": "https://abhinavchoudhary2005.github.io/E-commerce",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
