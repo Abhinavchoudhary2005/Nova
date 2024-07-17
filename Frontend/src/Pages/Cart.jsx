@@ -63,7 +63,7 @@ export const Cart = () => {
               <CartItems
                 key={data._id}
                 id={data._id}
-                img={`http://localhost:8000/images/${data.image}`}
+                img={`${process.env.REACT_APP_API_KEY}images/${data.image}`}
                 name={data.name}
                 size={data.size}
                 price={data.new_price}

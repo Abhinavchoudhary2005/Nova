@@ -8,7 +8,7 @@ export const CartItems = (props) => {
   const removeItem = async () => {
     const token = localStorage.getItem("token");
     try {
-      await fetch("http://localhost:8000/cart/removeProduct", {
+      await fetch(`${process.env.REACT_APP_API_KEY}removeProduct`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

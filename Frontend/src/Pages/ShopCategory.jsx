@@ -41,7 +41,7 @@ export const ShopCategory = (props) => {
     <div className="shop-category">
       <div className="banner-div">
         <img
-          src={`http://localhost:8000/images/${props.banner}`}
+          src={`${process.env.REACT_APP_API_KEY}images/${props.banner}`}
           alt="Banner"
           className="banner"
           loading="lazy"

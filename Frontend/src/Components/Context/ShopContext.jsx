@@ -10,9 +10,12 @@ export const ShopContextProvider = (props) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/product", {
-          method: "GET",
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_API_KEY}api/product`,
+          {
+            method: "GET",
+          }
+        );
         const data = await response.json();
         setAllProduct(data);
       } catch (error) {
@@ -23,9 +26,12 @@ export const ShopContextProvider = (props) => {
 
     const fetchBanner = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/banner", {
-          method: "GET",
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_API_KEY}api/banner`,
+          {
+            method: "GET",
+          }
+        );
         const data = await response.json();
         setBanner(data);
       } catch (error) {

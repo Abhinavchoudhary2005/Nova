@@ -72,14 +72,17 @@ export const Product = () => {
         return;
       }
 
-      const res = await fetch("http://localhost:8000/cart/addToCart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `${token}`,
-        },
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_API_KEY}cart/addtocart`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `${token}`,
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       const responseData = await res.json();
 
@@ -103,7 +106,7 @@ export const Product = () => {
           <div className="side-img-card">
             {[...Array(4)].map((_, index) => (
               <img
-                src={`http://localhost:8000/images/${image}`}
+                src={`${process.env.REACT_APP_API_KEY}images/${image}`}
                 className="side-img"
                 alt={`Product side view ${index + 1}`}
                 key={index}
@@ -112,7 +115,7 @@ export const Product = () => {
           </div>
           <div>
             <img
-              src={`http://localhost:8000/images/${image}`}
+              src={`${process.env.REACT_APP_API_KEY}images/${image}`}
               className="main-img"
               alt={`${name} main view`}
             />

@@ -17,7 +17,7 @@ export const Items = (props) => {
         <div className="img-div">
           <img
             className="img"
-            src={`http://localhost:8000/images/${props.image}`}
+            src={`${process.env.REACT_APP_API_KEY}images/${props.image}`}
             alt={props.desc}
             onLoad={props.onImageLoad}
             loading="lazy"

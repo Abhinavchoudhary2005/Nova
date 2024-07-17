@@ -1,7 +1,7 @@
 export const checkAuth = async () => {
   try {
     const token = localStorage.getItem("token");
-    const response = await fetch("http://localhost:8000/admin", {
+    const response = await fetch(`${process.env.REACT_APP_API_KEY}admin`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

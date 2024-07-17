@@ -10,7 +10,7 @@ export const CartContextProvider = (props) => {
 
   const fetchCart = useCallback(async () => {
     try {
-      const res = await fetch("http://localhost:8000/cart", {
+      const res = await fetch(`${process.env.REACT_APP_API_KEY}cart`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

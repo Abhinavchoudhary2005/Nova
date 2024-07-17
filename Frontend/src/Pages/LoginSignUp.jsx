@@ -150,8 +150,8 @@ export const LoginSignUp = () => {
 
     const url =
       loginsignup === "login"
-        ? "http://localhost:8000/user/login"
-        : "http://localhost:8000/user/signup";
+        ? `${process.env.REACT_APP_API_KEY}user/login`
+        : `${process.env.REACT_APP_API_KEY}user/signup`;
 
     const data =
       loginsignup === "login" ? { email, password } : { name, email, password };
