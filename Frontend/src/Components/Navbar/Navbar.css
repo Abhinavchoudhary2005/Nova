@@ -4,18 +4,17 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #f8f8f8;
   box-shadow: 0 5px 7px -1px rgba(0, 0, 0, 0.1);
 }
 
 .logo-container-nav {
   display: flex;
   cursor: pointer;
-  max-width: 8rem;
 }
 
-.logo {
-  height: 10rem;
-  margin-left: -5rem;
+.logo-nav {
+  height: 3.5rem;
 }
 
 .name {

@@ -44,7 +44,7 @@ export const Navbar = () => {
       <div className="Nav">
         <Link to="/E-commerce" className="Link">
           <div className="logo-container-nav" onClick={() => setMenu("shop")}>
-            <img src={logo} className="logo" alt="Logo" />
+            <img src={logo} className="logo-nav" alt="Logo" />
           </div>
         </Link>
         <ul>
