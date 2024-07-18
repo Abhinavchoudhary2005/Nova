@@ -50,6 +50,7 @@ Make sure you have the following installed on your machine:
     In the frontend directory, create a .env file with the following content:
     ```bash
     REACT_APP_API_KEY=http://localhost:8000/
+    ```
 
     Backend
     In the backend directory, create a .env file with the following content:
@@ -57,6 +58,7 @@ Make sure you have the following installed on your machine:
     PORT=8000
     MONGODB_URL=<your mongoDB URL>
     SECRET=<any secret>
+    ```
 
     Replace <your mongoDB URL> with your actual MongoDB connection string, and <any secret> with a secret string for JWT authentication.
 
@@ -68,11 +70,13 @@ Make sure you have the following installed on your machine:
     ```bash
     cd frontend
     npm install
+    ```
 
     For the backend:
     ```bash
     cd ../backend
     npm install
+    ```
 
 ### Database Setup
 
@@ -84,11 +88,13 @@ Make sure you have the following installed on your machine:
     ```bash
     cd Backend
     npm start
+    ```
 
     2.Start the frontend:
     ```bash
     cd Frontend
     npm start
+    ```
 
 ## Contributing
 
