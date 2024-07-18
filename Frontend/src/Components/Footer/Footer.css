@@ -1,6 +1,7 @@
 .footer {
   min-height: 50vh;
   width: 100vw;
+  background-color: #f8f8f8;
 }
 
 .footer-display {
@@ -23,8 +24,8 @@
 }
 
 .logo-footer {
-  height: 12rem;
-  padding-left: 65px;
+  transform: scale(0.35);
+  padding-left: 140px;
 }
 
 .slogan {
@@ -100,5 +101,4 @@ li:hover {
     display: inline-grid;
     margin-left: 12rem;
     box-shadow: none;
-  }
 }
