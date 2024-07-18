@@ -9,8 +9,6 @@
 
 .login-sign-up-card {
   width: 40vw;
-  padding: 2rem;
-  background-color: white;
 }
 
 .login-sign-up-btn {
@@ -57,12 +55,16 @@
 
 @media screen and (max-width: 1000px) {
   .login-sign-up-card {
-    width: 50vw;
+    width: 65vw;
   }
 }
 
-@media screen and (max-width: 650px) {
-  .login-sign-up-card {
-    transform: scale(0.9);
+@media screen and (max-width: 500px) {
+  .login-sign-up {
+    margin: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 13rem;
   }
 }

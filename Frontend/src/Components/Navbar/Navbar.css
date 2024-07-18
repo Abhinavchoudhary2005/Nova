@@ -15,7 +15,7 @@
 
 .logo {
   height: 10rem;
-  margin-left: -5rem;
+  margin-left: -3rem;
 }
 
 .name {
@@ -130,60 +130,10 @@ li:hover {
 
 /* responsive */
 
-@media screen and (max-width: 850px) {
-  .Nav {
-    transform: scale(0.9);
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .Nav {
-    transform: scale(0.85);
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .Nav {
-    transform: scale(0.8);
-  }
-  .logo-container {
-    transform: scale(0.9);
-    margin-right: 2rem;
-    margin-left: -2rem;
-  }
-  .login-cart {
-    transform: scale(0.9);
-    margin-right: -2rem;
-    margin-left: 2rem;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .logo-container {
-    transform: scale(0.9);
-    margin-right: 2rem;
-    margin-left: -3.5rem;
-  }
-}
-
-@media screen and (max-width: 580px) {
-  .Nav {
-    transform: scale(0.75);
-  }
-  .logo-container {
-    margin-right: 2.5rem;
-    margin-left: -2.5rem;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .Nav {
-    transform: scale(0.7);
-  }
-}
-
 @media screen and (max-width: 500px) {
   .Nav {
-    transform: scale(0.6);
+    width: min-content;
+    margin-left: -2px;
+    margin-right: -3px;
   }
 }

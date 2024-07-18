@@ -4,10 +4,11 @@ import { PopularWomen } from "../Components/Popular-women/Popular-women.jsx";
 import { Exclusive } from "../Components/Exclusive/Exclusive.jsx";
 import { NewCollection } from "../Components/NewCollection/NewCollection.jsx";
 import { EmailOffer } from "../Components/EmailOffer/EmailOffer.jsx";
+import "./CSS/shop.css";
 
 export const Shop = () => {
   return (
-    <div>
+    <div className="content">
       <Hero />
       <PopularWomen />
       <Exclusive />

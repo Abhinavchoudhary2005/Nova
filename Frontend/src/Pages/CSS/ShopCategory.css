@@ -32,3 +32,13 @@
   justify-content: space-around;
   align-items: center;
 }
+
+@media screen and (max-width: 500px) {
+  .shop-category-cards-div {
+    margin-inline: 25rem;
+  }
+
+  .banner-div {
+    width: 80vh;
+  }
+}
