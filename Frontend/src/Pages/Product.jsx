@@ -100,7 +100,7 @@ export const Product = () => {
   };
 
   return (
-    <div>
+    <div className="bigproduct">
       <div className="product">
         <div className="product-child">
           <div className="side-img-card">
@@ -149,8 +149,7 @@ export const Product = () => {
                       selectedSize === size ? "selected" : ""
                     }`}
                     key={size}
-                    onClick={() => handleSizeClick(size)}
-                  >
+                    onClick={() => handleSizeClick(size)}>
                     {size}
                   </div>
                 ))}

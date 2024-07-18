@@ -96,20 +96,9 @@ li:hover {
   margin: 2rem;
 }
 
-@media screen and (max-width: 650px) {
-  .footer {
-    transform: scale(0.9);
-  }
-}
-
-@media screen and (max-width: 560px) {
-  .footer {
-    transform: scale(0.6);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .footer {
-    transform: scale(0.7);
-  }
+@media screen and (max-width: 500px) {
+  .footer .footer-card {
+    display: inline-grid;
+    margin-left: 12rem;
+    box-shadow: none;
 }
