@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "667b06ec06a8e9d5e0d30d6f",
+    "image": "1719338732284-banner_mens.png",
+    "category": "men",
+    "__v": 0
+  },
+  {
+    "_id": "667b06ec06a8e9d5e0d30d71",
+    "image": "1719338732446-banner_kids.png",
+    "category": "kid",
+    "__v": 0
+  },
+  {
+    "_id": "667b06ec06a8e9d5e0d30d73",
+    "image": "1719338732541-banner_womens.png",
+    "category": "women",
+    "__v": 0
+  }
+]

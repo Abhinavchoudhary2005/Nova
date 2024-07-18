@@ -1,0 +1,222 @@
+[
+  {
+    "_id": "667affde3390fa3f3e9b63b9",
+    "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    "image": "1719336926790-product_3.png",
+    "category": "women",
+    "new_price": 60,
+    "old_price": 100.5,
+    "available": true,
+    "date": "2024-06-25T17:35:26.950+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affde3390fa3f3e9b63bb",
+    "name": "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    "image": "1719336926840-product_13.png",
+    "category": "men",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:26.973+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affde3390fa3f3e9b63c1",
+    "name": "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    "image": "1719336926857-product_19.png",
+    "category": "men",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:26.992+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affde3390fa3f3e9b63c3",
+    "name": "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    "image": "1719336926860-product_20.png",
+    "category": "men",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:26.995+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affde3390fa3f3e9b63c5",
+    "name": "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    "image": "1719336926867-product_22.png",
+    "category": "men",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:26.997+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63c7",
+    "name": "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    "image": "1719336926872-product_24.png",
+    "category": "men",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.001+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63c9",
+    "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+    "image": "1719336926880-product_26.png",
+    "category": "kid",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.004+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63cb",
+    "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+    "image": "1719336926882-product_27.png",
+    "category": "kid",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.009+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63cd",
+    "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+    "image": "1719336926885-product_28.png",
+    "category": "kid",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.013+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63cf",
+    "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+    "image": "1719336926888-product_29.png",
+    "category": "kid",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.015+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63d1",
+    "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+    "image": "1719336926899-product_32.png",
+    "category": "kid",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.021+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63d3",
+    "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+    "image": "1719336926902-product_33.png",
+    "category": "kid",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.024+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63d5",
+    "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+    "image": "1719336926905-product_34.png",
+    "category": "kid",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.026+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affde3390fa3f3e9b63bd",
+    "name": "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    "image": "1719336926843-product_14.png",
+    "category": "men",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:26.978+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63db",
+    "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    "image": "1719336926780-product_1.png",
+    "category": "women",
+    "new_price": 50,
+    "old_price": 80.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.035+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affde3390fa3f3e9b63bf",
+    "name": "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    "image": "1719336926854-product_18.png",
+    "category": "men",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:26.985+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63df",
+    "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    "image": "1719336926795-product_4.png",
+    "category": "women",
+    "new_price": 100,
+    "old_price": 150,
+    "available": true,
+    "date": "2024-06-25T17:35:27.043+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63dd",
+    "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    "image": "1719336926793-product_3.png",
+    "category": "women",
+    "new_price": 60,
+    "old_price": 100.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.037+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63d7",
+    "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+    "image": "1719336926908-product_35.png",
+    "category": "kid",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.028+00:00",
+    "__v": 0
+  },
+  {
+    "_id": "667affdf3390fa3f3e9b63d9",
+    "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+    "image": "1719336926912-product_36.png",
+    "category": "kid",
+    "new_price": 85,
+    "old_price": 120.5,
+    "available": true,
+    "date": "2024-06-25T17:35:27.031+00:00",
+    "__v": 0
+  }
+]
