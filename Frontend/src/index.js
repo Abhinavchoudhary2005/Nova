@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ShopContextProvider } from "./Components/Context/ShopContext.jsx";
 import { CartContextProvider } from "./Components/Context/CartContex.jsx";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.render(
   <React.StrictMode>

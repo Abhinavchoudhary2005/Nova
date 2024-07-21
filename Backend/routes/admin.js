@@ -19,9 +19,9 @@ const router = express.Router();
 
 router.route("/").get(userIsAuth);
 router
-  .route("/upload/product", uploadMulter.single("image"))
-  .post(uploadProduct);
-router.route("/upload/banner", uploadMulter.single("image")).post(uploadBanner);
+  .route("/upload/product")
+  .post(uploadMulter.single("image"), uploadProduct);
+router.route("/upload/banner").post(uploadMulter.single("image"), uploadBanner);
 router.route("/remove/product").post(removeProduct);
 router.route("/remove/banner").post(removeBanner);
 

@@ -1,0 +1,53 @@
+.admin-img {
+  width: 4rem;
+}
+
+.admin-product {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.6rem;
+}
+
+.admin-title {
+  padding-left: 2rem;
+  max-width: 13rem;
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  text-align: left;
+}
+
+.admin-oldprice {
+  padding-left: 2rem;
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  text-align: center;
+}
+
+.admin-newprice {
+  padding-left: 2rem;
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  text-align: center;
+}
+
+.admin-category {
+  padding-left: 2rem;
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  text-align: center;
+}
+
+.admin-available {
+  padding-left: 2rem;
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  text-align: center;
+}
+
+.admin-remove {
+  padding-left: 2rem;
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  text-align: center;
+  cursor: pointer;
+}

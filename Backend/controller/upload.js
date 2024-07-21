@@ -1,34 +1,55 @@
-const Banner = require("../modules/banner");
 const Product = require("../modules/product");
+const Banner = require("../modules/banner");
 
 const uploadProduct = async (req, res) => {
   try {
-    const { name, category, new_price, old_price, available } = req.body;
-    await Product.create({
+    const { name, category, newprice, oldprice } = req.body;
+    const image = req.file.filename;
+
+    const newProduct = new Product({
       name,
-      image: req.file.filename,
       category,
-      new_price,
-      old_price,
-      available,
+      new_price: newprice,
+      old_price: oldprice,
+      image,
     });
-    res.status(201).send("Product uploaded successfully");
+
+    await newProduct.save();
+    res
+      .status(201)
+      .json({ success: true, message: "Product uploaded successfully" });
   } catch (error) {
-    res.status(500).send(`Error uploading product: ${error.message}`);
+    res
+      .status(500)
+      .json({
+        success: false,
+        error: `Error uploading product: ${error.message}`,
+      });
   }
 };
 
 const uploadBanner = async (req, res) => {
   try {
     const { name, category } = req.body;
-    await Banner.create({
+    const image = req.file.filename;
+
+    const newBanner = new Banner({
       name,
-      image: req.file.filename,
       category,
+      image,
     });
-    res.status(201).send("banner uploaded successfully");
+
+    await newBanner.save();
+    res
+      .status(201)
+      .json({ success: true, message: "Banner uploaded successfully" });
   } catch (error) {
-    res.status(500).send(`Error uploading product: ${error.message}`);
+    res
+      .status(500)
+      .json({
+        success: false,
+        error: `Error uploading banner: ${error.message}`,
+      });
   }
 };
 
