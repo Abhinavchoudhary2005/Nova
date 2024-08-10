@@ -10,6 +10,7 @@ import { LoginSignUp } from "./Pages/LoginSignUp.jsx";
 import { Footer } from "./Components/Footer/Footer.jsx";
 import { ShopContext } from "./Components/Context/ShopContext.jsx";
 import { NotFound } from "./Pages/NotFound";
+import { PrivacyPolicy } from "./Pages/PrivacyPolicy.jsx";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import { Admin } from "./Pages/Admin";
 
@@ -79,6 +80,10 @@ function App() {
               element={<PrivateRoute element={Admin} />}
             />
             <Route path="*" element={<NotFound />} />
+            <Route
+              path="/E-commerce/privacypolicy"
+              element={<PrivacyPolicy />}
+            />
           </Routes>
         </AppLayout>
       </BrowserRouter>
