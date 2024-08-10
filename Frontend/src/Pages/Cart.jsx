@@ -46,7 +46,7 @@ export const Cart = () => {
           Add items to Cart
         </h1>
       ) : (
-        <table>
+        <table className="cart-table">
           <thead>
             <tr>
               <th className="cart-product">Products</th>

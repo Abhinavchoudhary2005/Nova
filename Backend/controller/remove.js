@@ -28,7 +28,7 @@ const removeProduct = async (req, res) => {
       // Delete the associated image file
       const imagePath = path.join(__dirname, "../upload/images", product.image);
       deleteImageFile(imagePath);
-      res.send({ message: "Product deleted successfully" });
+      res.status(200).send({ message: "Product deleted successfully" });
     }
   } catch (err) {
     res
@@ -52,7 +52,7 @@ const removeBanner = async (req, res) => {
       // Delete the associated image file
       const imagePath = path.join(__dirname, "../upload/images", banner.image);
       deleteImageFile(imagePath);
-      res.send({ message: "Banner deleted successfully" });
+      res.status(200).send({ message: "Banner deleted successfully" });
     }
   } catch (err) {
     res
