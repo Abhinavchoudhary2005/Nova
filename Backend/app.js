@@ -7,7 +7,6 @@ const { checkForAuth } = require("./middleware/auth");
 const admin = require("./routes/admin");
 const api = require("./routes/api");
 const user = require("./routes/user");
-const token = require("./routes/token");
 const cart = require("./routes/cart");
 const RestrictToAdmin = require("./middleware/RestrictToAdmin");
 
@@ -33,7 +32,11 @@ mongoose
 // MIDDLEWARE
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(checkForAuth);
 
 // ROUTES
@@ -41,7 +44,6 @@ app.use("/admin", RestrictToAdmin, admin);
 app.use("/images", express.static(path.join(__dirname, "/upload/images")));
 app.use("/api", api);
 app.use("/user", user);
-app.use("/token", token);
 app.use("/cart", cart);
 
 // Error handling middleware

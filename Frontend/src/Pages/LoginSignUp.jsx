@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./CSS/LoginSignUp.css";
 import eyeIcon from "../Components/Assets/open-eye.jpg";
 import eyeSlashIcon from "../Components/Assets/close-eye.jpg";
+import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 
 const Login = ({
   email,
@@ -14,6 +15,8 @@ const Login = ({
   handleSwitchMode,
   showPassword,
   setShowPassword,
+  handleGoogleSuccess,
+  handleGoogleFailure,
 }) => (
   <form className="login" onSubmit={handleSubmit}>
     <h1>Login</h1>
@@ -60,6 +63,13 @@ const Login = ({
         By continuing, I agree to the terms of use & privacy policy
       </label>
     </div>
+    <p className="google-or">--OR--</p>
+    <div className="googleAuthLogin">
+      <GoogleLogin
+        onSuccess={handleGoogleSuccess}
+        onError={handleGoogleFailure}
+      />
+    </div>
   </form>
 );
 
@@ -74,6 +84,8 @@ const SignUp = ({
   handleSwitchMode,
   showPassword,
   setShowPassword,
+  handleGoogleSuccess,
+  handleGoogleFailure,
 }) => (
   <form className="sign-up" onSubmit={handleSubmit}>
     <h1>Sign Up</h1>
@@ -127,6 +139,13 @@ const SignUp = ({
       <label htmlFor="signup-checkbox" className="checkbox-label">
         By continuing, I agree to the terms of use & privacy policy
       </label>
+    </div>
+    <p className="google-or">--OR--</p>
+    <div className="googleAuthLogin">
+      <GoogleLogin
+        onSuccess={handleGoogleSuccess}
+        onError={handleGoogleFailure}
+      />
     </div>
   </form>
 );
@@ -193,8 +212,48 @@ export const LoginSignUp = () => {
     }
   };
 
+  const handleGoogleSuccess = async (credentialResponse) => {
+    try {
+      const url = `${process.env.REACT_APP_API_KEY}user/googleAuth`;
+
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token: credentialResponse.credential }),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        localStorage.setItem("token", result.uid);
+
+        toast.success(
+          loginsignup === "signup"
+            ? "User created successfully"
+            : "Logged in successfully"
+        );
+
+        setTimeout(() => {
+          if (result.redirectUrl) {
+            window.location.href = result.redirectUrl;
+          }
+        }, 1500);
+      } else {
+        toast.error(result.error || "Google Authentication failed");
+      }
+    } catch (err) {
+      toast.error(err.message);
+    }
+  };
+
+  const handleGoogleFailure = () => {
+    toast.error("Google Authentication failed");
+  };
+
   return (
-    <div>
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT_ID}>
       <div className="login-sign-up">
         <div className="login-sign-up-card">
           {loginsignup === "login" ? (
@@ -207,6 +266,8 @@ export const LoginSignUp = () => {
               handleSwitchMode={handleSwitchMode}
               showPassword={showPassword}
               setShowPassword={setShowPassword}
+              handleGoogleSuccess={handleGoogleSuccess}
+              handleGoogleFailure={handleGoogleFailure}
             />
           ) : (
             <SignUp
@@ -220,10 +281,12 @@ export const LoginSignUp = () => {
               handleSwitchMode={handleSwitchMode}
               showPassword={showPassword}
               setShowPassword={setShowPassword}
+              handleGoogleSuccess={handleGoogleSuccess}
+              handleGoogleFailure={handleGoogleFailure}
             />
           )}
         </div>
       </div>
-    </div>
+    </GoogleOAuthProvider>
   );
 };
