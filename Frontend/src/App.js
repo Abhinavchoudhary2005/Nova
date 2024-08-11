@@ -13,6 +13,7 @@ import { NotFound } from "./Pages/NotFound";
 import { PrivacyPolicy } from "./Pages/PrivacyPolicy.jsx";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import { Admin } from "./Pages/Admin";
+import { Orders } from "./Pages/Orders.jsx";
 
 const AppLayout = ({ children }) => {
   const location = useLocation();
@@ -75,15 +76,16 @@ function App() {
             </Route>
             <Route path="/E-commerce/Cart" element={<Cart />} />
             <Route path="/E-commerce/Login" element={<LoginSignUp />} />
+            <Route path="/E-commerce/Orders" element={<Orders />} />
             <Route
               path="/E-commerce/admin"
               element={<PrivateRoute element={Admin} />}
             />
-            <Route path="*" element={<NotFound />} />
             <Route
               path="/E-commerce/privacypolicy"
               element={<PrivacyPolicy />}
             />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AppLayout>
       </BrowserRouter>

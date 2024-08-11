@@ -1,22 +1,28 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import "./Navbar.css";
 import logo from "../Assets/nova-logo.png";
 import cartIcon from "../Assets/cart_icon.png";
 import { CartContext } from "../Context/CartContex";
+import { UserContext } from "../Context/UserContext";
 import { Link, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const Navbar = () => {
-  const { cart, triggerCartChange } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
+  const { user } = useContext(UserContext);
   const location = useLocation();
 
   const token = localStorage.getItem("token");
 
+  const [profileList, setProfileList] = useState(false);
   const [menu, setMenu] = useState(
     () => localStorage.getItem("ShopMenu") || "shop"
   );
   const [cartItemCount, setCartItemCount] = useState(token ? cart.length : 0);
+
+  const profileRef = useRef(null);
+  const profileListRef = useRef(null);
 
   useEffect(() => {
     localStorage.setItem("ShopMenu", menu);
@@ -24,7 +30,26 @@ export const Navbar = () => {
 
   useEffect(() => {
     setCartItemCount(token ? cart.length : 0);
-  }, [cart, triggerCartChange, token]);
+  }, [cart, token]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        profileListRef.current &&
+        !profileListRef.current.contains(event.target) &&
+        profileRef.current &&
+        !profileRef.current.contains(event.target)
+      ) {
+        setProfileList(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const logout = () => {
     try {
@@ -38,6 +63,8 @@ export const Navbar = () => {
       toast.error("Error Logging Out");
     }
   };
+
+  const profileImage = user.user ? user.user.name[0].toUpperCase() : null;
 
   return (
     <div>
@@ -74,11 +101,26 @@ export const Navbar = () => {
           />
         </ul>
         <div className="login-cart">
-          {token ? (
-            <div className="Link">
-              <button onClick={logout} className="login-btn">
-                Log Out
-              </button>
+          {user.user ? (
+            <div ref={profileRef}>
+              <div
+                className="profile"
+                onClick={() => setProfileList((prev) => !prev)}
+              >
+                <p>{profileImage}</p>
+              </div>
+              <div
+                className="profile-list"
+                ref={profileListRef}
+                style={{ display: profileList ? "block" : "none" }}
+              >
+                <ul>
+                  <Link to="/E-commerce/Orders" className="Link">
+                    <li>My-Orders</li>
+                  </Link>
+                  <li onClick={logout}>Log-Out</li>
+                </ul>
+              </div>
             </div>
           ) : (
             <Link to="/E-commerce/Login" className="Link">

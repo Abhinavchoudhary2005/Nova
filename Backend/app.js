@@ -8,6 +8,7 @@ const admin = require("./routes/admin");
 const api = require("./routes/api");
 const user = require("./routes/user");
 const cart = require("./routes/cart");
+const token = require("./routes/token");
 const RestrictToAdmin = require("./middleware/RestrictToAdmin");
 
 // PORT
@@ -45,6 +46,7 @@ app.use("/images", express.static(path.join(__dirname, "/upload/images")));
 app.use("/api", api);
 app.use("/user", user);
 app.use("/cart", cart);
+app.use("/token", token);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

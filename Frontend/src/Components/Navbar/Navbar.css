@@ -77,7 +77,10 @@ li:hover {
 
 .login-cart {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
 }
 
 .login-btn {
@@ -105,6 +108,7 @@ li:hover {
 
 .cart {
   position: relative;
+  margin-top: 8px;
 }
 
 .cart-num {
@@ -125,6 +129,45 @@ li:hover {
 
 .Link {
   text-decoration: none;
+}
+
+.profile p {
+  background-color: #df5151;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.profile-list ul {
+  z-index: 10;
+  display: block;
+  position: absolute;
+  width: 5.5rem;
+  border-radius: 1.5rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  top: 3.5rem;
+  left: 0.3rem;
+  background-color: white;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.profile-list li {
+  padding-top: 0.5rem;
+  width: fit-content;
+}
+
+.profile-list li::after {
+  display: none;
 }
 
 /* responsive */
